@@ -11,6 +11,6 @@
 
 ## 📬 Contacto
 
-Para sugestões ou dúvidas, entre em contacto via [email ou redes sociais da Comunidade Alma Fénix].
+Para sugestões ou dúvidas, entre em contacto via oficialalmafenix@gmail.com.
 
 ---
