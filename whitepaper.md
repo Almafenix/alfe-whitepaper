@@ -1,4 +1,126 @@
-# White Paper – ALFE Token
+# ALFE Token – White Paper
+
+**Version 1.0**  
+_April 2025_
+
+---
+
+## 📖 Executive Summary
+
+**ALFE** is a digital governance and recognition token created by the **Alma Fénix Community**, designed to:
+
+- Promote civic, artistic, and social participation.
+- Reinforce a sense of belonging and commitment to the association’s mission.
+- Provide a transparent system for voting and symbolic rewards.
+
+This document outlines the vision, utility, distribution, and legal framework of the ALFE token, along with its development roadmap.
+
+---
+
+## 🎯 Vision and Mission
+
+Alma Fénix is a non-profit association dedicated to social inclusion, community innovation, and the promotion of solidarity-based values.
+
+The ALFE Token embodies this vision by:
+
+- Recognizing individual and collective contributions.
+- Stimulating collaborative economic practices.
+- Facilitating participatory decision-making mechanisms.
+
+---
+
+## 🪙 What is ALFE?
+
+**ALFE** is:
+
+- **An internal governance currency**: each token equals one vote in General Assemblies and decision-making processes.
+- **A recognition tool**: used to reward engagement and merit.
+- **A symbolic asset**: it holds no fiduciary value or redemption obligation.
+
+---
+
+## ✨ Token Objectives
+
+- **Encourage participation** in cultural, educational, and social initiatives.
+- **Foster a solidarity-based economy** built on merit and collaboration.
+- **Reward contributions** to the common good and inclusive projects.
+
+---
+
+## ⚙️ Use Cases and Features
+
+ALFE can be used to:
+
+- Vote on strategic decisions of the association.
+- Access exclusive events, workshops, and programs.
+- Exchange for solidarity-based products or services.
+- Demonstrate social impact (e.g., through digital certificates).
+
+---
+
+## 🏛️ Governance Model
+
+Each ALFE token represents one voting right:
+
+- **1 ALFE = 1 vote**
+- Decisions are made by simple majority or qualified quorum, per internal regulations.
+- Founders have a capped voting power to ensure fair and balanced governance.
+
+---
+
+## 📊 Initial Token Distribution
+
+**Total supply:** 20,000,000 ALFE
+
+| Category                        | Percentage | ALFE Amount         |
+|--------------------------------|------------|----------------------|
+| Founders and Members           | 40%        | 8,000,000 ALFE       |
+| DAO Reserve Fund               | 30%        | 6,000,000 ALFE       |
+| Participation Rewards          | 20%        | 4,000,000 ALFE       |
+| Sustainability and Development | 10%        | 2,000,000 ALFE       |
+
+---
+
+## 📜 Legal and Regulatory Framework
+
+ALFE is defined as:
+
+- **An internal utility and governance token**, without fiduciary or market value.
+- Governed by the Internal Rules of the Alma Fénix Association.
+- Subject to Portuguese and European regulations, including the **MiCA Regulation** (Markets in Crypto-Assets), when applicable.
+
+**Note:** If ALFE is ever publicly tradable or carries economic value in the future, all legal compliance procedures will be followed, including registration and licensing as required.
+
+---
+
+## 🛤️ Development Roadmap
+
+| Phase                    | Period             | Objective                                        |
+|--------------------------|--------------------|--------------------------------------------------|
+| Initial Token Issuance   | April 2025         | Distribution to founders and members             |
+| Technical Implementation | May–July 2025      | Token management platform deployment             |
+| Events and Activities    | Summer 2025        | First participatory actions using ALFE           |
+| Compliance Alignment     | By December 2025   | Full MiCA, AML, and KYC review and documentation |
+| Network Expansion        | 2026               | Integrate with broader social impact networks    |
+
+---
+
+## 🙌 Get Involved
+
+If you share our vision, join us:
+
+- As a member or volunteer  
+- As a social innovation partner  
+- Through solidarity-based contributions
+
+For more information:
+
+🌐 [Alma Fénix Official Website](https://almafenix.pt)  
+📧 [Contact us](mailto:info@almafenix.pt)
+
+---
+
+
 
 # ALFE Token – White Paper
 
