@@ -1,43 +1,46 @@
 # Roadmap — ALFE
 
 **Versão:** outubro de 2026  
-**Estado:** roadmap indicativo; não constitui promessa de execução.
+**Estado:** indicativo; as fases dependem de validação e recursos disponíveis.
 
-## 1. Revisão documental e de governação — em curso
+## 1. Recuperação do contrato — concluída
 
-- Atualizar o whitepaper e remover contradições entre a versão inglesa e a portuguesa.
-- Separar consultas digitais de votações formais dos órgãos estatutários.
-- Rever comunicação de airdrops, campanhas de donativos e benefícios.
-- Garantir que não são prometidos lucros, rendimento, valorização ou resgate.
+- Recuperado o ficheiro Solidity original `contracts/ALFEToken.sol`.
+- Confirmada implementação ERC-20 baseada em OpenZeppelin.
+- Confirmado supply de 10.000.000 ALFE criado no construtor.
+- Confirmada ausência de `mint()`, `owner()`, `burn()` e `pause()` no código recuperado.
 
-## 2. Verificação técnica — por confirmar
+## 2. Validação on-chain — em curso
 
-- Confirmar rede e identificador da rede.
-- Confirmar endereço do contrato e ligação ao explorador de blocos.
-- Verificar oferta total, permissões administrativas e possibilidade de emissão adicional.
-- Confirmar saldos, carteiras e correspondência com a distribuição descrita no whitepaper.
-- Documentar eventuais auditorias ou revisões técnicas; não declarar auditorias inexistentes.
+- Comparar o código recuperado com o bytecode publicado.
+- Confirmar `totalSupply()` atual.
+- Confirmar saldos e carteiras relevantes.
+- Documentar a correspondência entre o contrato e o código recuperado.
 
-## 3. Regras de atribuição — planeado, sujeito a validação
+## 3. Tokenomics — atualização em curso
 
-- Publicar critérios objetivos e transparentes de atribuição.
-- Distinguir reconhecimento comunitário de remuneração por trabalho ou serviços.
-- Manter quotas e donativos separados de qualquer promessa de retorno.
-- Definir regras de correção de erros e prevenção de abusos.
+- Tratar 10 milhões como supply definido pelo contrato recuperado.
+- Remover a antiga referência a 20 milhões.
+- Não utilizar a antiga distribuição 40%/30%/20%/10% como distribuição on-chain.
+- Documentar apenas carteiras e categorias que tenham correspondência verificável.
 
-## 4. Utilidade comunitária — planeado, sujeito a validação
+## 4. Utilidade comunitária — planeada, sujeita a validação
 
 - Avaliar certificados digitais e distintivos de participação.
 - Avaliar acesso a conteúdos, eventos ou funcionalidades específicas.
 - Realizar consultas digitais de natureza claramente identificada.
 - Garantir que nenhuma funcionalidade substitui os estatutos ou os órgãos da associação.
 
-## 5. Parcerias e expansão — fase futura
+## 5. Verificação do código — pendente
 
-- Avaliar integrações com parceiros e plataformas.
-- Fazer análise jurídica e regulatória antes de disponibilizar o token em mercados, serviços de troca ou aplicações externas.
-- Atualizar a documentação sempre que o contrato ou a utilidade real se alterem.
+- Avaliar publicação/verificação do código no PolygonScan.
+- Garantir que a documentação pública corresponde ao contrato efetivamente publicado.
 
-## Critérios de conclusão
+## 6. Revisão jurídica e regulatória — necessária antes de alterações materiais
 
-Uma etapa só deverá ser considerada concluída quando exista evidência verificável, documentação atualizada e, quando aplicável, validação técnica, jurídica, fiscal ou estatutária.
+- Rever o enquadramento do token e as comunicações públicas.
+- Avaliar campanhas, donativos, benefícios e eventuais mecanismos de utilização ou negociação.
+
+## Critério de conclusão
+
+Uma etapa só deverá ser considerada concluída quando exista evidência verificável e documentação atualizada.
