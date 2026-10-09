@@ -1,245 +1,132 @@
-# ALFE Token – White Paper
+# ALFE — Alma Fénix Participation Token
+## Whitepaper conceptual, funcional e técnico
 
-**Version 1.0**  
-_April 2025_
-
----
-
-## 📖 Executive Summary
-
-**ALFE** is a digital governance and recognition token created by the **Alma Fénix Community**, designed to:
-
-- Promote civic, artistic, and social participation.
-- Reinforce a sense of belonging and commitment to the association’s mission.
-- Provide a transparent system for voting and symbolic rewards.
-
-This document outlines the vision, utility, distribution, and legal framework of the ALFE token, along with its development roadmap.
+**Versão:** 3.0  
+**Data:** outubro de 2026  
+**Estado:** documento conceptual e informativo sujeito a validação jurídica, fiscal, estatutária, técnica e regulatória.
 
 ---
 
-## 🎯 Vision and Mission
+## 1. Sumário executivo
 
-Alma Fénix is a non-profit association dedicated to social inclusion, community innovation, and the promotion of solidarity-based values.
+O **ALFE** é concebido como um token digital de participação, reconhecimento e utilidade comunitária no ecossistema Alma Fénix.
 
-The ALFE Token embodies this vision by:
+O ALFE não representa capital da associação, participação no seu património, direito a lucros ou excedentes, nem promessa de valorização financeira. A posse de ALFE não confere, por si só, qualidade de associado nem substitui os direitos e deveres previstos nos estatutos.
 
-- Recognizing individual and collective contributions.
-- Stimulating collaborative economic practices.
-- Facilitating participatory decision-making mechanisms.
+## 2. Natureza e utilização
 
----
+O ALFE poderá apoiar, quando efetivamente implementado:
 
-## 🪙 What is ALFE?
+- reconhecimento de participação em atividades e projetos;
+- distintivos ou certificados digitais;
+- acesso a conteúdos, eventos ou funcionalidades específicas;
+- consultas comunitárias de natureza não estatutária;
+- reconhecimento de contributos artísticos, educativos, culturais, científicos ou sociais.
 
-**ALFE** is:
+Estas possibilidades não constituem garantia de serviços futuros.
 
-- **An internal governance currency**: each token equals one vote in General Assemblies and decision-making processes.
-- **A recognition tool**: used to reward engagement and merit.
-- **A symbolic asset**: it holds no fiduciary value or redemption obligation.
+## 3. O que o ALFE não representa
 
----
+O ALFE não confere, por si só:
 
-## ✨ Token Objectives
+- dividendos, juros ou participação em lucros/excedentes;
+- direitos sobre o património da Alma Fénix;
+- participação no capital da associação;
+- remuneração financeira pela simples detenção;
+- direito a reembolso, resgate, recompra ou conversão em euros;
+- garantia de liquidez, preço mínimo ou valorização;
+- qualidade de associado ou direito automático de voto em Assembleias Gerais.
 
-- **Encourage participation** in cultural, educational, and social initiatives.
-- **Foster a solidarity-based economy** built on merit and collaboration.
-- **Reward contributions** to the common good and inclusive projects.
+As consultas digitais nunca substituem os órgãos estatutários nem as deliberações formalmente previstas nos estatutos.
 
----
+## 4. Atribuição, quotas e donativos
 
-## ⚙️ Use Cases and Features
+O ALFE poderá ser atribuído segundo critérios transparentes associados a participação, voluntariado, contributos culturais, educativos, científicos ou sociais.
 
-ALFE can be used to:
+A atribuição de tokens não substitui remuneração por trabalho ou serviços legalmente devida.
 
-- Vote on strategic decisions of the association.
-- Access exclusive events, workshops, and programs.
-- Exchange for solidarity-based products or services.
-- Demonstrate social impact (e.g., through digital certificates).
+Quotas, donativos, subsídios e financiamento de projetos são mecanismos distintos da detenção de tokens. Um donativo não constitui investimento na associação nem confere direitos sobre lucros ou património.
 
----
+## 5. Blockchain e contrato
 
-## 🏛️ Governance Model
+O ALFE está documentado como **ERC-20 na Polygon PoS**, Chain ID **137**.
 
-Each ALFE token represents one voting right:
+**Contrato:** `0x2952f9aD84B5BE384d48Eab81Ac4fa2f21dB0532`  
+**Decimais:** 18
 
-- **1 ALFE = 1 vote**
-- Decisions are made by simple majority or qualified quorum, per internal regulations.
-- Founders have a capped voting power to ensure fair and balanced governance.
+Foi recuperado o ficheiro Solidity original `contracts/ALFEToken.sol`, baseado em OpenZeppelin `ERC20`.
 
----
+A implementação recuperada é:
 
-## 📊 Initial Token Distribution
+```solidity
+contract ALFEToken is ERC20 {
+    constructor() ERC20("ALFE Token", "ALFE") {
+        _mint(msg.sender, 10000000 * 10 ** decimals());
+    }
+}
+```
 
-**Total supply:** 20,000,000 ALFE
+Isto significa que o contrato cria **10.000.000 ALFE** no deployment, para o `msg.sender`.
 
-| Category                        | Percentage | ALFE Amount         |
-|--------------------------------|------------|----------------------|
-| Founders and Members           | 40%        | 8,000,000 ALFE       |
-| DAO Reserve Fund               | 30%        | 6,000,000 ALFE       |
-| Participation Rewards          | 20%        | 4,000,000 ALFE       |
-| Sustainability and Development | 10%        | 2,000,000 ALFE       |
+O código recuperado **não contém função `mint()`**. Também não contém `Ownable`, `owner()`, `burn()` ou `pause()` próprios, nem mecanismo de proxy/upgradeability no ficheiro apresentado.
 
----
+## 6. Supply e tokenomics
 
-## 📜 Legal and Regulatory Framework
+O código recuperado estabelece uma emissão de **10.000.000 ALFE** no construtor e não apresenta função posterior de emissão.
 
-ALFE is defined as:
+Assim, para efeitos de documentação do contrato recuperado, **10.000.000 ALFE é o supply definido pela implementação encontrada**.
 
-- **An internal utility and governance token**, without fiduciary or market value.
-- Governed by the Internal Rules of the Alma Fénix Association.
-- Subject to Portuguese and European regulations, including the **MiCA Regulation** (Markets in Crypto-Assets), when applicable.
+A documentação anterior indicava 20.000.000 ALFE e uma distribuição conceptual 40%/30%/20%/10%. Essa informação fica **expressamente substituída**. Não deve ser apresentada como distribuição on-chain.
 
-**Note:** If ALFE is ever publicly tradable or carries economic value in the future, all legal compliance procedures will be followed, including registration and licensing as required.
+Não existe atualmente uma distribuição percentual oficial documentada que possa ser afirmada sem correspondência verificável entre categorias e carteiras.
 
----
+## 7. Dados on-chain observados
 
-## 🛤️ Development Roadmap
+| Parâmetro | Dado |
+|---|---|
+| Nome | ALFE Token |
+| Símbolo | ALFE |
+| Padrão | ERC-20 |
+| Rede | Polygon PoS |
+| Chain ID | 137 |
+| Contrato | `0x2952f9aD84B5BE384d48Eab81Ac4fa2f21dB0532` |
+| Decimais | 18 |
+| Supply definido no código recuperado | **10.000.000 ALFE** |
+| Max Total Supply apresentado pelo explorador | 10.000.000 ALFE |
+| Holders apresentados | 2 |
+| Transferências apresentadas | 2 |
 
-| Phase                    | Period             | Objective                                        |
-|--------------------------|--------------------|--------------------------------------------------|
-| Initial Token Issuance   | April 2025         | Distribution to founders and members             |
-| Technical Implementation | May–July 2025      | Token management platform deployment             |
-| Events and Activities    | Summer 2025        | First participatory actions using ALFE           |
-| Compliance Alignment     | By December 2025   | Full MiCA, AML, and KYC review and documentation |
-| Network Expansion        | 2026               | Integrate with broader social impact networks    |
+O histórico observado pelo explorador apresenta uma criação inicial de 10.000.000 ALFE a partir do endereço nulo e uma transferência posterior de 1.000 ALFE.
 
----
+O código-fonte recuperado ainda não foi bytecode-verificado contra o contrato publicado no PolygonScan. Assim, a documentação distingue entre **código recuperado** e **estado on-chain observado**.
 
-## 🙌 Get Involved
+## 8. Controlo do contrato
 
-If you share our vision, join us:
+Ao contrário do ETHIK, o código ALFE recuperado não implementa `Ownable` nem uma função `owner()` própria. Portanto, não devemos descrever o ALFE como um token com “owner” com base neste código.
 
-- As a member or volunteer  
-- As a social innovation partner  
-- Through solidarity-based contributions
+O facto de a carteira de deployment ter recebido os tokens iniciais não lhe confere automaticamente poderes administrativos sobre o contrato.
 
-For more information:
+## 9. Transparência e riscos
 
-🌐 [Alma Fénix Official Website](https://almafenix.pt)  
-📧 [Contact us](mailto:info@almafenix.pt)
+A blockchain permite verificar transações, mas não garante a veracidade de métricas de impacto. A associação deverá minimizar dados pessoais on-chain e informar os participantes sobre perda de chaves, phishing e irreversibilidade de certas transações.
 
----
+Não devem ser prometidos mercado, liquidez, valorização, rendimento ou conversão em euros.
 
+## 10. Enquadramento jurídico e regulatório
 
+A classificação jurídica depende das características efetivas do ativo, dos direitos associados, da emissão, distribuição, transferibilidade e promoção. A intenção social ou a designação “token comunitário” não determinam, por si só, o enquadramento jurídico.
 
-# ALFE Token – White Paper
+O [Regulamento (UE) 2023/1114 relativo aos mercados de criptoativos (MiCA)](https://eur-lex.europa.eu/eli/reg/2023/1114/oj) poderá ser relevante consoante o desenho e utilização concretos. Antes de promover, distribuir, negociar ou criar mecanismos de compra e venda, deve ser obtida análise jurídica e regulatória específica.
 
-**Versão 1.0**  
-_Abril 2025_
+Este documento não constitui parecer jurídico, autorização regulatória, oferta pública ou aconselhamento financeiro.
 
----
+## 11. Roadmap técnico
 
-## 📖 Sumário Executivo
+1. **Recuperação do código original — concluída.**
+2. **Validação do código contra o contrato on-chain — em curso.**
+3. **Confirmação do `totalSupply()` atual — pendente.**
+4. **Verificação/publicação do código no PolygonScan — pendente.**
+5. **Documentação final da distribuição e carteiras — pendente.**
+6. **Validação jurídica e regulatória antes de alterações materiais — necessária.**
 
-O **ALFE** é um token digital de governança e reconhecimento criado pela **Comunidade Alma Fénix**, com o propósito de:
-
-- Valorizar a participação cívica, artística e solidária.
-- Reforçar o sentimento de pertença e compromisso com a missão associativa.
-- Proporcionar um sistema transparente de voto e recompensa simbólica.
-
-Este documento descreve a visão, a utilidade, a distribuição e o enquadramento jurídico do ALFE, bem como o seu roadmap de desenvolvimento.
-
----
-
-## 🎯 Visão e Missão
-
-A Alma Fénix é uma associação dedicada à inclusão social, inovação comunitária e promoção de valores solidários.
-
-O ALFE Token integra esta visão ao:
-
-- Reconhecer contributos individuais e coletivos.
-- Estimular práticas de economia colaborativa.
-- Facilitar mecanismos participativos de decisão.
-
----
-
-## 🪙 O que é o ALFE?
-
-O **ALFE** é:
-
-- **Uma moeda de governança interna**: cada token corresponde a um voto nas Assembleias e consultas deliberativas.
-- **Um instrumento de reconhecimento**: utilizado para premiar participação e mérito.
-- **Um ativo simbólico**: não possui valor fiduciário ou contratual de resgate.
-
----
-
-## ✨ Objetivos do Token
-
-- **Fomentar a participação** em iniciativas culturais, sociais e educativas.
-- **Criar uma economia solidária** baseada no mérito e no compromisso.
-- **Recompensar contributos** para o bem comum e a inclusão.
-
----
-
-## ⚙️ Utilidade e Funcionalidades
-
-O ALFE pode ser utilizado para:
-
-- Votar em decisões estratégicas da associação.
-- Participar em eventos, formações e projetos exclusivos.
-- Trocar por serviços, produtos ou benefícios simbólicos.
-- Comprovar envolvimento e impacto social (ex.: certificados digitais).
-
----
-
-## 🏛️ Modelo de Governação
-
-Cada associado detentor de ALFE possui direitos proporcionais de voto:
-
-- **1 ALFE = 1 voto**.
-- Deliberações são tomadas por maioria simples ou quórum qualificado conforme regulamento interno.
-- Os Fundadores detêm um limite máximo de ALFE com direito a voto, garantindo equilíbrio representativo.
-
----
-
-## 📊 Distribuição Inicial
-
-**Total de tokens emitidos:** 20.000.000 ALFE
-
-| Categoria                    | Percentagem | Quantidade ALFE          |
-|------------------------------|-------------|--------------------------|
-| Fundadores e Associados      | 40%         | 8.000.000                |
-| Fundo de Reserva da DAO      | 30%         | 6.000.000                |
-| Recompensas por Envolvimento | 20%         | 4.000.000                |
-| Sustentabilidade e Desenvolvimento | 10%   | 2.000.000                |
-
----
-
-## 📜 Enquadramento Jurídico e Regulação
-
-O ALFE é definido como:
-
-- **Token interno de utilidade e governação**, sem valor mobiliário ou fiduciário.
-- Enquadrado no Regulamento Interno da Alma Fénix.
-- Sujeito às regras portuguesas e europeias, nomeadamente o **Regulamento MiCA** (Markets in Crypto-Assets), quando aplicável.
-
-**Nota:** Se no futuro o ALFE for convertido em ativo transacionável com valor económico, serão adotados todos os procedimentos legais de licenciamento, registo e compliance.
-
----
-
-## 🛤️ Roadmap
-
-| Fase                       | Período            | Objetivo                                    |
-|----------------------------|--------------------|---------------------------------------------|
-| Emissão inicial            | Abril 2025         | Distribuição aos fundadores e associados   |
-| Implementação técnica      | Maio–Julho 2025    | Plataforma de gestão de ALFE               |
-| Eventos e Formação         | Verão 2025         | Primeiras ações com uso do token           |
-| Avaliação e Compliance     | Até Dezembro 2025  | Alinhamento com normas MiCA e AML/KYC      |
-| Expansão e Parcerias       | 2026               | Integração em redes de economia social     |
-
----
-
-## 🙌 Participa e Constrói Connosco
-
-Se partilhas a nossa visão, junta-te:
-
-- Como associado ou voluntário
-- Como parceiro institucional
-- Através de contribuições solidárias
-
-Para mais informações:
-
-🌐 [Website da Alma Fénix](https://almafenix.pt)  
-📧 [E-mail de contacto](mailto:info@almafenix.pt)
-
-[...]
+**Nota:** os dados técnicos devem ser atualizados se a implementação on-chain for alterada.
