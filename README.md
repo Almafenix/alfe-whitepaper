@@ -2,29 +2,32 @@
 
 O **ALFE** é concebido como um token digital de participação, reconhecimento e utilidade comunitária no ecossistema Alma Fénix. Não representa capital da associação, não confere direitos sobre lucros ou património e não substitui a qualidade nem os direitos estatutários dos associados.
 
-## Dados on-chain atualmente observados
+## Dados técnicos recuperados
 
 - **Rede:** Polygon PoS
 - **Chain ID:** 137
-- **Padrão:** ERC-20
+- **Padrão:** ERC-20 / OpenZeppelin
 - **Contrato:** `0x2952f9aD84B5BE384d48Eab81Ac4fa2f21dB0532`
 - **Decimais:** 18
-- **Max Total Supply apresentado pelo PolygonScan:** 10.000.000 ALFE
-- **Holders apresentados:** 2
-- **Transferências apresentadas:** 2
+- **Supply definido no código recuperado:** 10.000.000 ALFE
+- **Mint adicional:** não existe no código recuperado
+- **Owner:** não existe no código recuperado
+- **Burn próprio:** não existe no código recuperado
+- **Pause próprio:** não existe no código recuperado
+- **Proxy/upgradeability:** não existe no ficheiro recuperado
 
-O contrato ainda não tem código-fonte verificado/publicado no PolygonScan. Por isso, as permissões administrativas, eventual emissão adicional, burn, pause, upgradeability e imutabilidade do supply permanecem por confirmar.
+O ficheiro Solidity original `contracts/ALFEToken.sol` foi recuperado em outubro de 2026. O construtor cria os 10 milhões uma única vez para `msg.sender` do deployment.
 
-A versão anterior do whitepaper indicava 20.000.000 ALFE e uma distribuição percentual conceptual. Essa informação não é considerada tokenomics efetiva e foi substituída pelos dados on-chain atualmente observados, sem presumir uma distribuição por categorias.
+O código recuperado ainda não foi bytecode-verificado contra o contrato publicado no PolygonScan. A confirmação final deverá comparar o código/bytecode e o estado on-chain.
+
+A versão anterior do whitepaper indicava 20.000.000 ALFE e uma distribuição percentual conceptual. Essa informação está substituída: o código recuperado define **10.000.000 ALFE** e não contém funções para emissão adicional.
 
 ## Documentação
 
 - [Whitepaper ALFE](whitepaper.md)
 - [Roadmap](roadmap.md)
 - [Informação sobre atribuição comunitária](airdrop-form.md)
-- [Princípios para campanhas de apoio e reconhecimento](fundadores)
-
-> O ficheiro PDF mencionado em versões anteriores não está incluído neste repositório neste momento. Não deve ser considerado uma versão oficial até ser gerado e verificado.
+- [Código Solidity recuperado](contracts/ALFEToken.sol)
 
 ## Princípios essenciais
 
