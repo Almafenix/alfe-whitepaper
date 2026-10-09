@@ -1,7 +1,7 @@
 # ALFE — Alma Fénix Participation Token
 ## Whitepaper conceptual e funcional
 
-**Versão:** 2.0  
+**Versão:** 2.1  
 **Data:** outubro de 2026  
 **Estado:** documento conceptual sujeito a validação jurídica, fiscal, estatutária e técnica.
 
@@ -13,7 +13,7 @@ O **ALFE** é concebido como um token digital de participação, reconhecimento 
 
 O ALFE não representa capital da associação, participação no seu património, direito a lucros ou excedentes, nem promessa de valorização financeira. A posse de ALFE, por si só, não confere a qualidade de associado nem substitui os direitos e deveres previstos nos estatutos.
 
-Este whitepaper distingue a visão do projeto das funcionalidades efetivamente implementadas. Os parâmetros técnicos só serão definitivos depois de verificados no smart contract e nas carteiras relevantes.
+Este whitepaper distingue a visão do projeto dos factos técnicos atualmente verificáveis. Os dados on-chain abaixo indicados foram confirmados através da página pública do token no PolygonScan; o código-fonte do contrato, contudo, ainda não se encontra verificado no explorador.
 
 ## 2. Visão e missão
 
@@ -88,47 +88,47 @@ Os donativos são voluntários e não conferem direitos associativos especiais, 
 
 Qualquer campanha que associe uma contribuição monetária à atribuição de tokens, benefícios, bens ou serviços deverá ser analisada previamente em termos jurídicos, fiscais, contabilísticos e regulatórios.
 
-## 6. Oferta total e distribuição indicada na versão anterior
+## 6. Oferta total e dados on-chain atualmente confirmados
 
-A versão anterior do whitepaper indicava uma oferta total de **20.000.000 ALFE**, distribuída da seguinte forma:
+A documentação anterior indicava uma oferta de **20.000.000 ALFE**. Essa referência fica **substituída** pelos dados atualmente observados no explorador público do contrato.
 
-| Categoria indicada na versão anterior | Percentagem | Quantidade indicada |
-|---|---:|---:|
-| Fundadores e associados | 40% | 8.000.000 ALFE |
-| Reserva de desenvolvimento comunitário/DAO | 30% | 6.000.000 ALFE |
-| Participação e reconhecimento | 20% | 4.000.000 ALFE |
-| Sustentabilidade e desenvolvimento | 10% | 2.000.000 ALFE |
-| **Total indicado** | **100%** | **20.000.000 ALFE** |
+| Parâmetro | Dado atualmente observado |
+|---|---|
+| Token | ALFE |
+| Padrão | ERC-20 |
+| Rede | Polygon PoS |
+| Chain ID | 137 |
+| Contrato | `0x2952f9aD84B5BE384d48Eab81Ac4fa2f21dB0532` |
+| Decimais | 18 |
+| Max Total Supply apresentado pelo explorador | **10.000.000 ALFE** |
+| Holders apresentados pelo explorador | 2 |
+| Transferências apresentadas pelo explorador | 2 |
 
-Estes valores são reproduzidos para manter a rastreabilidade documental, mas **não constituem confirmação independente da oferta efetivamente criada, dos saldos distribuídos ou da existência de carteiras separadas**.
+O histórico visível do token mostra uma criação inicial de **10.000.000 ALFE** a partir do endereço nulo e uma transferência posterior de **1.000 ALFE** para outro endereço. Estes dados descrevem o estado/histórico indexado pelo explorador no momento da revisão; não constituem, por si só, prova de que não existam mecanismos administrativos adicionais.
 
-Antes de apresentar esta tabela como tokenomics definitiva, a Alma Fénix deverá confirmar, através do smart contract, do explorador de blocos e dos registos das carteiras:
+O contrato encontra-se atualmente **sem código-fonte verificado/publicado no PolygonScan**. Por isso, o valor de 10.000.000 ALFE deve ser descrito como o **Max Total Supply apresentado pelo explorador**, e não como uma afirmação de imutabilidade absoluta até que o código-fonte e as permissões do contrato sejam verificados.
 
-1. a oferta total criada e se pode ou não aumentar;
-2. a rede e o endereço do contrato;
-3. os saldos distribuídos e ainda disponíveis;
-4. a existência de funções de emissão, queima, pausa ou transferência;
-5. a correspondência entre as categorias da tabela e carteiras reais;
-6. se a reserva DAO é apenas uma categoria conceptual ou uma estrutura técnica efetiva.
-
-A tabela deverá ser corrigida se não corresponder à implementação. Expressões como “DAO” ou “fundo” não devem sugerir a existência de uma entidade juridicamente autónoma, carteira específica ou mecanismo de governação automática sem evidência disso.
+A antiga tabela de 40%/30%/20%/10% não é considerada tokenomics efetiva. Não deve ser apresentada como distribuição on-chain sem correspondência verificável entre categorias e carteiras.
 
 ## 7. Rede e implementação técnica
 
-A documentação anterior identificava a **Polygon** como rede do ALFE. Esta referência deverá ser confirmada antes da publicação de endereços ou detalhes técnicos definitivos.
+O ALFE está identificado no explorador público como **ERC-20 na Polygon PoS**. O endereço de contrato atualmente documentado é:
 
-A documentação técnica deverá indicar, quando verificados:
+`0x2952f9aD84B5BE384d48Eab81Ac4fa2f21dB0532`
 
-- nome e identificador da rede;
-- endereço do contrato;
-- padrão técnico do token;
-- oferta total on-chain;
-- data de implantação;
-- ligação para o explorador de blocos;
-- permissões administrativas e condições de atualização;
-- auditorias ou revisões técnicas disponíveis.
+A página pública do contrato identifica como criador do contrato o endereço abreviado `0xaf963603...A5bD41DdE`. O facto de um endereço surgir como **Contract Creator** não deve ser confundido automaticamente com “contract owner” ou com todas as permissões administrativas internas. Essas permissões só podem ser confirmadas através do código/ABI ou de chamadas on-chain às funções correspondentes.
 
-Não se deve afirmar que o token é seguro, auditado ou juridicamente autorizado apenas por existir numa blockchain.
+O código-fonte ainda não está verificado no PolygonScan. Permanecem por confirmar:
+
+- existência e controlo de `owner` ou equivalente;
+- possibilidade de `mint` ou emissão adicional;
+- possibilidade de `burn`;
+- funções de pausa ou bloqueio;
+- eventual upgradeability/proxy;
+- permissões administrativas;
+- possibilidade efetiva de alterar parâmetros relevantes.
+
+Não se deve afirmar que o contrato é imutável, auditado ou renunciado sem evidência técnica.
 
 ## 8. Utilidade e benefícios
 
@@ -166,28 +166,23 @@ O nome “token comunitário”, a ausência declarada de valor de mercado ou a 
 
 O [Regulamento (UE) 2023/1114 relativo aos mercados de criptoativos (MiCA)](https://eur-lex.europa.eu/eli/reg/2023/1114/oj) prevê, em determinadas circunstâncias, requisitos relativos a ofertas públicas, documentação informativa e comunicações de marketing. Existem exclusões e exceções específicas, cuja aplicação depende dos factos concretos e não deve ser presumida.
 
-Antes de qualquer oferta pública, comercialização, promoção com contrapartida, admissão à negociação ou criação de mecanismos de compra e venda, a Alma Fénix deverá obter análise jurídica e regulatória específica, incluindo quanto à eventual aplicação do MiCA e de outras normas portuguesas e europeias. Este whitepaper não determina a classificação legal definitiva nem constitui autorização regulatória.
+Antes de qualquer oferta pública, comercialização, promoção com contrapartida, admissão à negociação ou criação de mecanismos de compra e venda, a Alma Fénix deverá obter análise jurídica e regulatória específica, incluindo quanto à eventual aplicação do MiCA e de outras normas portuguesas e europeias.
 
 A associação deverá também confirmar o tratamento fiscal e contabilístico de donativos, quotas, campanhas, benefícios, NFTs e eventuais receitas provenientes de atividades económicas.
 
 ## 12. Roadmap revisto
 
-O roadmap é indicativo e não constitui promessa de execução.
-
 | Etapa | Estado | Objetivo |
 |---|---|---|
 | Revisão conceptual e jurídica | Em revisão | Alinhar o token com a missão e os estatutos da associação |
-| Verificação técnica | Por confirmar | Validar contrato, oferta total, distribuição e permissões |
+| Validação on-chain | **Dados base confirmados; permissões pendentes** | Confirmar código, funções e controlo administrativo |
+| Verificação do código-fonte | Pendente | Publicar e verificar o código original, se disponível |
 | Atualização documental | Em curso | Harmonizar whitepaper, README, roadmap e materiais de campanha |
 | Utilidade comunitária | Planeada, sujeita a validação | Definir funcionalidades reais, critérios e condições |
 | Consultas digitais | Planeadas, sujeitas a validação | Apoiar participação consultiva sem substituir os órgãos estatutários |
 | Expansão e parcerias | Futura | Avaliar integrações após análise técnica e regulatória |
 
-As datas de 2025 da versão anterior foram removidas como compromissos futuros por já terem decorrido. As etapas só deverão ser marcadas como concluídas quando existir evidência verificável.
-
 ## 13. Princípios de implementação
-
-A evolução do ALFE seguirá estes princípios:
 
 1. **Finalidade social:** o token serve a missão da associação.
 2. **Não distribuição de lucros:** o token não confere direitos a lucros ou excedentes.
